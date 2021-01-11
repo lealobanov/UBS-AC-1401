@@ -81,9 +81,7 @@ public class VWAPCalculator implements Calculator {
     //No market provided
     if (twoWayMarketPrice.getMarket() == null)  {
         throw new IllegalArgumentException("No market specified.");
-    } else if (){
-    //Market not in pre-defined enum or not of type Market
-    } else {
+    else {
         Market market = twoWayMarketPrice.getMarket();
     }
 
@@ -98,9 +96,7 @@ public class VWAPCalculator implements Calculator {
     if (twoWayPriceObj.getInstrument() == null) {
         throw new IllegalArgumentException("No instrument specified.");
     } 
-    else if (){
-    //Instrument not in pre-defined enum or not of type Instrument
-    } else {
+    else {
       Instrument instrument = twoWayPriceObj.getInstrument();
     }
 
@@ -113,8 +109,9 @@ public class VWAPCalculator implements Calculator {
 
         throw new IllegalArgumentException("Specified TwoWayPrice missing state, bid price, bid amount, offer price, or offer amount attributes. Cannot compute market update.");
     } 
-    //Type-check attributes in two-way price: State or double
-
+    
+    //Consider implementing more robust exception handling; type-checking, check if specified enum is valid, etc. However most of this is handled by the compiler by default.
+    
     //Update VWAP computations per market, per instrument
     VwapComputation current_vwap = get_IMpair(instrument, market);
         //Update bid values
