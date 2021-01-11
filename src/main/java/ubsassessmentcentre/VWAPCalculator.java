@@ -74,6 +74,7 @@ public class VWAPCalculator implements Calculator {
         private State VWAPstate = FIRM;
 	}
 
+    @Override
     TwoWayPrice applyMarketUpdate(final MarketUpdate twoWayMarketPrice) {
 
     //Exception handling - check for invalid or missing inputs
@@ -111,7 +112,7 @@ public class VWAPCalculator implements Calculator {
     } 
     
     //Consider implementing more robust exception handling; type-checking, check if specified enum is valid, etc. However most of this is handled by the compiler by default.
-    
+
     //Update VWAP computations per market, per instrument
     VwapComputation current_vwap = get_IMpair(instrument, market);
         //Update bid values
@@ -202,4 +203,6 @@ public class VWAPCalculator implements Calculator {
 			getOfferVWAP(current_vwap),
 			getOA(current_vwap));
     }
+}
+
 }
