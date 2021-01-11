@@ -14,10 +14,12 @@ public class MarketUpdate_Calc implements MarketUpdate {
 	}
 
     //Getter methods for market and two-way price
+	@Override
 	public Market getMarket() {
 		return market;
 	}
 
+	@Override
 	public TwoWayPrice getTwoWayPrice() {
 		return twoWayPrice;
 	}
