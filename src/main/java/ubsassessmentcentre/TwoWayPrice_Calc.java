@@ -22,26 +22,33 @@ public class TwoWayPrice_Calc implements TwoWayPrice {
 	}
  
     //Getter methods for class attributes
+
+	@Override
     public Instrument getInstrument() {
 		return instrument;
 	}
 
+	@Override
 	public State getState() {
 		return state;
 	}
 
+	@Override
 	public double getBidPrice() {
 		return bidPrice;
 	}
 
+	@Override
 	public double getOfferAmount() {
 		return offerAmount;
 	}
 
+	@Override
 	public double getOfferPrice() {
 		return offerPrice;
 	}
 
+	@Override
 	public double getBidAmount() {
 		return bidAmount;
 	}
