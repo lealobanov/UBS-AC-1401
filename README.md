@@ -32,9 +32,9 @@ It was unclear whether the desired VWAP two-way price should be returned for a p
   At present, the applyMarketUpdate method takes in a single argument, a MarketUpdate object; as per the task instructions, I have not modified this. However in realizing an implementation which would support both per-instrument/per-market VWAPs and instrument/market aggregate VWAPS, a second argument would need to be introduced. This second method argument would function as a boolean "flag" which would denote which type of VWAP is desired. This would require introducing an if/else statement to check for the presence of flag before returning the VWAP as a TwoWayPrice object (see code comments for a sample implementation). Alternatively, the program could be modified to return both computations. This is largely a matter of design preference; the computation and storage of calculations needed for both alternatives are already in place. 
   
 * Exception handling and edge cases
- * Try/catch blocks to catch exceptions
- * Throw IllegalArgument exception in specific cases where supplied inputs are invalid or missing
- * Ensuring mathematically valid and avoiding redundant VWAP calculations
+  * Try/catch blocks to catch exceptions
+  * Throw IllegalArgument exception in specific cases where supplied inputs are invalid or missing
+  * Ensuring mathematically valid and avoiding redundant VWAP calculations
   * Return 0 when attempting to divide by 0
   * Do not perform unnecessary additions and multiplications when one of the arguments is 0, as this has no impact on the overall VWAP value
   
