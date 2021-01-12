@@ -38,7 +38,10 @@ It was unclear whether the desired VWAP two-way price should be returned for a p
   * Return 0 when attempting to divide by 0
   * Do not perform unnecessary additions and multiplications when one of the arguments is 0, as this has no impact on the overall VWAP value
   
-* Program implementation - main method 
-  * Assume some external program controller; thus omitted in my implementation
+* Program implementation - main() method 
+  * At present, the program has no valid entry point which instantiates a Calculator object and accepts a series of MarketUpdates
+  * In developing an implementation, I assumed presence of some external program controller which will handle initialization of the Calculator objects and manage of stream of MarketUpdates as they are fed into the calculator, and thus omitted this in my implementation. Additionally, some form of caching or database system would need to be implemented to avoid losing calculated values if the program is terminated. Ideally, the MarketUpdates would be serialized by date/time or an ordering index to maintain a sense of program state. This would allow for increased error handling to ensure that MarketUpdates are handled in the correct order (e.g. if they arise simultaneously), and that the VWAP returned is in fact reflective of the most recent MarketUpdate.
+ 
 * Formatting of output 
+  * Currently, a TwoWayPrice object is returned 
 
