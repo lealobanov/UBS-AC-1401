@@ -7,6 +7,7 @@ Design an implementation of the provided Calculator interface, such that, on cal
 The VWAP two-way price for an instrument is defined as:
 
 Bid = Sum(Market Bid Price * Market Bid Amount)/ Sum(Market Bid Amount)
+
 Offer = Sum(Market Offer Price * Market Offer Amount)/ Sum(Market Offer Amount)
 
 Sample interfaces and enums were provided as a starting point for the implementation. 
